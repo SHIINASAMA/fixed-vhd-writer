@@ -9,7 +9,7 @@ namespace VHDHelper
 {
     public class VHDCaller
     {
-        [DllImport("libWriter.dll")]
-        public static extern int write(string VHDName, int lba, string DataName);
+        [DllImport("libWriter.dll", EntryPoint = "write")]
+        public static extern int Write(string VHDName, int lba, string DataName);
     }
 }

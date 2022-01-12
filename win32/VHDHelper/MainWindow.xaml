@@ -12,24 +12,24 @@
                 <StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Label Content="VHD 文件:" Margin="0,0,10,10" Width="70"/>
-                        <TextBox Name="VHDTextBot" IsReadOnly="True" Margin="0,0,10,10" Width="350" FontSize="17"/>
-                        <Button Name="SelectVHDFileButton" Content="选择" Margin="0,0,10,10" Width="90"/>
+                        <TextBox Name="VHDTextBox" IsReadOnly="True" Margin="0,0,10,10" Width="350" FontSize="17"/>
+                        <Button Name="SelectVHDFileButton" Content="选择" Margin="0,0,10,10" Width="90" Click="SelectVHDFileButton_Click"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Label Content="Data 文件:" Margin="0,0,10,10" Width="70"/>
                         <TextBox Name="DataTextBox" IsReadOnly="True" Margin="0,0,10,10" Width="350" FontSize="17"/>
-                        <Button Name="SelectDataFileButton" Content="选择" Margin="0,0,10,10" Width="90"/>
+                        <Button Name="SelectDataFileButton" Content="选择" Margin="0,0,10,10" Width="90" Click="SelectDataFileButton_Click"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Label Content="起始扇区:" Margin="0,0,10,10" Width="70"/>
-                        <TextBox Name="SectorTextBox" Margin="0,0,10,10" Width="80" InputMethod.IsInputMethodEnabled="False" Text="0" TextAlignment="Right" FontSize="17"/>
+                        <TextBox Name="SectorTextBox" Margin="0,0,10,10" Width="80" InputMethod.IsInputMethodEnabled="False" Text="0" TextAlignment="Right" FontSize="17" PreviewTextInput="SectorTextBox_PreviewTextInput"/>
                     </StackPanel>
                 </StackPanel>
             </GroupBox>
             <GroupBox Header="日志" Margin="10,5,10,5" Padding="10">
-                <TextBox Name="LogTextBox" IsReadOnly="True" VerticalScrollBarVisibility="Visible" Height="180"/>
+                <TextBox Name="LogTextBox" IsReadOnly="True" VerticalScrollBarVisibility="Visible" Height="200"/>
             </GroupBox>
-            <Button Content="写入" Margin="10,2,10,10"/>
+            <Button Content="写入" Margin="10,2,10,10" Name="WriteButton" Click="WriteButton_Click"/>
         </StackPanel>
         <StatusBar DockPanel.Dock="Bottom" Padding="0">
             <Label Content="就绪" Name="StatusLabel" VerticalContentAlignment="Top" FlowDirection="LeftToRight" UseLayoutRounding="True" FontSize="11"/>
