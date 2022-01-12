@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="wrapper.h" />
     <ClCompile Include="writer.c" />
   </ItemGroup>
   <ItemGroup>
